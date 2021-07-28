@@ -71,9 +71,10 @@ class GenericOCData:
 
     class OCFilterProvider:
         """
-        INNER/NESTED class inside DataLoader class, for storing and managing data prep routines (filters)
-        just right after it has been loaded. It enables any children class to load and transform data automatically
-        declaring a list of routines for data transformation from the set of routines stored in this class.
+        INNER/NESTED class inside GenericOCData class, for storing and managing data prep routines (filters)
+        just right after it has been loaded. It enables the caller to perform data transformations on DataFrames just by
+        declaring an ordered list of stored routines (called "filters") that will be applied to the DataFrame.
+        Mainly used for data preparation of OCObservationData and OCAnalysisData DataFrames.
         """
 
 
